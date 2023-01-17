@@ -1,9 +1,9 @@
-package week3.rentCar;
+package RentalShop;
 
 public enum Cars {
 
-    BMW (6, 001, "X3"),
-    FIAT (5, 002, "Panda"),
+    BMW(6, 123, "X3"),
+    FIAT(5, 002, "Panda"),
     OPEL(4, 003, "Astra");
 
     private final int fuelTank = 25;
@@ -18,5 +18,7 @@ public enum Cars {
         this.model = model;
     }
 
-
+    public int getReference() {
+        return reference;
+    }
 }
