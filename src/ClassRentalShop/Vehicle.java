@@ -7,12 +7,15 @@ public abstract class Vehicle {
     private double gasConsumption;
     private int maxSpeed;
     private double tankFuel = 25;
+    private TypeOfVehicle typeOfVehicle;
 
-    public Vehicle(String modelName, double gasConsumption, int maxSpeed) {
+    public Vehicle(String modelName, double gasConsumption, int maxSpeed, TypeOfVehicle typeOfVehicle) {
         this.modelName = modelName;
         this.gasConsumption = gasConsumption;
         this.maxSpeed = maxSpeed;
         this.isAvailable = true;
+        this.typeOfVehicle = typeOfVehicle;
+
     }
 
     public double refuel(double gasAmount){
@@ -41,6 +44,10 @@ public abstract class Vehicle {
 
     public double getTankFuel() {
         return tankFuel;
+    }
+
+    public TypeOfVehicle getTypeOfVehicle() {
+        return typeOfVehicle;
     }
 
     public void setTankFuel() {

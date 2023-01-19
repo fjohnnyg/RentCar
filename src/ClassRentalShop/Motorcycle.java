@@ -2,7 +2,10 @@ package ClassRentalShop;
 
 public class Motorcycle extends Vehicle {
 
-    public Motorcycle(String modelName, double gasConsumption, int maxSpeed) {
-        super(modelName, gasConsumption, 100);
+    private static final int MAX_SPEED = 100;
+    private static final TypeOfVehicle MOTORCYCLE = TypeOfVehicle.MOTORCYCLE;
+
+    public Motorcycle(String modelName, double gasConsumption) {
+        super(modelName, gasConsumption, MAX_SPEED, MOTORCYCLE);
     }
 }

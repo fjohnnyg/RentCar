@@ -26,11 +26,14 @@ public class RentShop {
         }
     }
 
-    public void showVehicles() {
+    public void showVehicles(TypeOfVehicle typeOfVehicle) {
         for (int i = 0; i < vehicles.length; i++) {
             if (vehicles[i] == null)
                 return;
-            if (vehicles[i].isAvailable()) {
+            if (vehicles[i].isAvailable() && vehicles[i].getTypeOfVehicle() == typeOfVehicle) {
+                System.out.println(vehicles[i].toString());
+            }
+            if (vehicles[i].isAvailable() && typeOfVehicle == TypeOfVehicle.ALL) {
                 System.out.println(vehicles[i].toString());
             }
         }

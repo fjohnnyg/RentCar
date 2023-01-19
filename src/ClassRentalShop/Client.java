@@ -12,8 +12,8 @@ public class Client {
         this.rentShop = rentShop;
     }
 
-    public void askForVehicle() {
-        rentShop.showVehicles();
+    public void askForVehicle(TypeOfVehicle typeOfVehicle) {
+        rentShop.showVehicles(typeOfVehicle);
     }
 
     public void rentVehicle(String vehicle) {
